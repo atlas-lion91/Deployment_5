@@ -28,7 +28,7 @@ junit 'test-reports/results.xml'
 stage ('Deploy') {
 steps {
 sh '''#!/bin/bash
-ssh -o StrictHostKeyChecking=no ubuntu@23.20.195.0 "wget https://raw.githubusercontent.com/atlas-lion91/Deployment_5/main/setup.sh && bash setup.sh"
+ssh ubuntu@23.20.195.0 'bash -s < /home/ubuntu/setup.sh'
 '''
 }
 }
