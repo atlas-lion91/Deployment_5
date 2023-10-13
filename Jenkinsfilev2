@@ -2,18 +2,20 @@ pipeline {
   agent any
    stages {
     stage ('Clean') {
-      steps {
+    steps {
         sh '''#!/bin/bash
-        echo "command to run the pkill.sh"
+        ssh -o StrictHostKeyChecking=no ubuntu@23.20.195.0 "wget https://raw.githubusercontent.com/atlas-lion91/Deployment_5/main/pkill.sh && bash pkill.sh"
         '''
-     }
-   }
- stage ('Deploy') {
-  steps {
-     sh '''#!/bin/bash
-     echo "command to run the setup2.sh"
-    '''
-      }
     }
+}
+
+stage ('Deploy') {
+    steps {
+        sh '''#!/bin/bash
+        ssh -o StrictHostKeyChecking=no ubuntu@23.20.195.0 "wget https://raw.githubusercontent.com/atlas-lion91/Deployment_5/main/setup2.sh && bash setup2.sh"
+        '''
+    }
+}
+
   }
 }
