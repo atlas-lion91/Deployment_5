@@ -4,8 +4,8 @@ pipeline {
     stage ('Clean') {
     steps {
         sh '''#!/bin/bash
-        scp pkill.sh ubuntu@10.0.1.33:/home/ubuntu
-        ssh ubuntu@10.0.1.33 'bash -s </home/ubuntu/pkill.sh' 
+        scp pkill.sh ubuntu@52.207.250.161:/home/ubuntu
+        ssh ubuntu@52.207.250.161 'bash -s </home/ubuntu/pkill.sh' 
         '''
     }
 }
@@ -13,8 +13,8 @@ pipeline {
 stage ('Deploy') {
     steps {
         sh '''#!/bin/bash
-        scp setup2.sh ubuntu@10.0.1.33:/home/ubuntu
-        ssh ubuntu@10.0.1.33 'bash -s </home/ubuntu/setup2.sh'
+        scp setup2.sh ubuntu@52.207.250.161:/home/ubuntu
+        ssh ubuntu@52.207.250.161 'bash -s </home/ubuntu/setup2.sh'
         '''
     }
 }
