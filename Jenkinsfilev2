@@ -4,7 +4,7 @@ pipeline {
     stage ('Clean') {
     steps {
         sh '''#!/bin/bash
-        scp setup.sh ubuntu@10.0.1.33:/home/ubuntu
+        scp pkill.sh ubuntu@10.0.1.33:/home/ubuntu
         ssh ubuntu@10.0.1.33 'bash -s </home/ubuntu/pkill.sh' 
         '''
     }
@@ -13,7 +13,8 @@ pipeline {
 stage ('Deploy') {
     steps {
         sh '''#!/bin/bash
-        ssh -o StrictHostKeyChecking=no ubuntu@23.20.195.0 "wget https://raw.githubusercontent.com/atlas-lion91/Deployment_5/main/setup2.sh && bash setup2.sh"
+        scp setup2.sh ubuntu@10.0.1.33:/home/ubuntu
+        ssh ubuntu@10.0.1.33 'bash -s </home/ubuntu/setup2.sh'
         '''
     }
 }
