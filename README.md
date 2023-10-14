@@ -18,8 +18,12 @@
 
 > In essence, this deployment was not just about setting up an application on the cloud but about doing so in a way that aligns with best practices, ensuring that the application is resilient, secure, and primed for growth.
 
+## Plan/System Design Diagram:
 
-### Infrastructure Setup with Terraform
+![Deployment 5 diagram drawio](https://github.com/atlas-lion91/Deployment_5/assets/140761974/a3dfdcdc-b491-4144-a51e-9d848452a7d3)
+
+
+### Infrastructure Setup with Terraform 
 
 > **Why Terraform?** Terraform is an Infrastructure as Code (IaC) tool that allows users to define and provision data center infrastructure using a declarative configuration language. It's chosen for its ability to manage complex infrastructure setups and configurations in a repeatable manner.
 
