@@ -1,7 +1,7 @@
 #!/bin/bash
 rm -rf Deployment_5
 source test/bin/activate
-git clone https://github.com/atlas-lion-91/Deployment_5.git
+git clone https://github.com/atlas-lion91/Deployment_5.git
 cd Deployment_5
 pip install -r requirements.txt
 pip install gunicorn
