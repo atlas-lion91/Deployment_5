@@ -104,6 +104,46 @@ By: Khalil Elkharbibi
      ![Screenshot 2023-10-13 223853](https://github.com/atlas-lion91/Deployment_5/assets/140761974/c8d91a42-f948-4904-8a0e-d39dc1d04c99)
 
 
+### CloudWatch Monitoring Setup
+
+> Amazon CloudWatch Alarms allow you to monitor metric values and set conditions to trigger notifications or automated actions. 
+
+> - **Why Use CloudWatch Alarms?:**
+
+> - **Proactive Monitoring**: Instead of reacting to issues after they've affected users, CloudWatch Alarms allow you to be proactive. By setting alarms, you can be notified of potential issues before they become critical.
+
+> - **Resource Optimization**: Alarms can help ensure you're making the most of your AWS resources. For instance, if CPU utilization is consistently low, you might be over-provisioned and could save money by downscaling.
+
+> - **Operational Awareness**: In a dynamic cloud environment, it's challenging to keep track of every resource. Alarms provide a way to automatically monitor and get insights into your application's operational health.
+
+> - **Automated Actions**: Beyond just notifications, alarms can trigger automated actions. For example, if an application's traffic spikes, an alarm could automatically scale up the number of EC2 instances.
+
+> Here's how you can set up a CloudWatch Alarm:
+
+> 1. **Navigate to CloudWatch Console**:
+>   - Open the CloudWatch console in AWS.
+   
+> 2. **Create Alarm**:
+>   - In the navigation pane, click on "Alarms" and then "Create Alarm".
+   
+> 3. **Select Metric**:
+>   - Choose the metric you want to monitor. This could be an EC2 metric like CPU utilization, network in/out, or any custom metric you've defined.
+   
+> 4. **Configure Conditions**:
+>   - Define the threshold for the metric. For instance, you can set an alarm if the CPU utilization goes above 80% for 5 minutes.
+   
+> 5. **Configure Actions**:
+>   - Specify what actions should be taken when the alarm state is triggered. This could be sending a notification through Amazon SNS, stopping or terminating an EC2 instance, or scaling an Auto Scaling group.
+   
+> 6. **Add a Description**:
+>   - Provide a meaningful description for the alarm, so team members can understand its purpose at a glance.
+   
+> 7. **Review and Create**:
+>   - Review your configurations and create the alarm.
+
+> Once the alarm is set, CloudWatch will continuously evaluate the chosen metric. If the metric breaches the condition set, the specified action will be triggered.
+
+
 ### Considerations
 
 > - **Decision to Run Jenkinsfilev2**: The decision to run Jenkinsfilev2 was based on the need to deploy the updated HTML content to the application.
@@ -153,7 +193,6 @@ During the deployment process, several challenges and issues were encountered:
   > - Regularly rotate SSH keys and use AWS Key Management Service (KMS) for enhanced key management.
 
 4. **Monitoring and Logging**:
-  > - Integrate CloudWatch or another monitoring tool to monitor the health and performance of EC2 instances.
   > - Set up centralized logging using tools like ELK Stack (Elasticsearch, Logstash, Kibana) or Graylog to have a consolidated view of logs from all instances.
 
 5. **Cost Optimization**:
