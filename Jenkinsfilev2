@@ -4,7 +4,8 @@ pipeline {
     stage ('Clean') {
     steps {
         sh '''#!/bin/bash
-        ssh -o StrictHostKeyChecking=no ubuntu@23.20.195.0 "wget https://raw.githubusercontent.com/atlas-lion91/Deployment_5/main/pkill.sh && bash pkill.sh"
+        scp setup.sh ubuntu@10.0.1.33:/home/ubuntu
+        ssh ubuntu@10.0.1.33 'bash -s </home/ubuntu/pkill.sh' 
         '''
     }
 }
