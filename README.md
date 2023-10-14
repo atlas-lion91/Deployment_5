@@ -1,5 +1,10 @@
 # Deploying a Retail Banking Application using Terraform
 
+October 13, 2023
+
+By: Khalil Elkharbibi
+
+
 ## Purpose
 
 > The primary objective of this deployment was to establish a robust, scalable, and secure infrastructure on AWS for hosting a web application. By leveraging the power of Terraform, an Infrastructure as Code (IaC) tool, the aim was to automate the provisioning of cloud resources, ensuring consistency, repeatability, and efficient infrastructure management.
