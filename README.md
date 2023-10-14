@@ -1,4 +1,4 @@
-# Retail Banking Application using Terraform
+# Deploying a Retail Banking Application using Terraform
 
 ## Purpose
 
