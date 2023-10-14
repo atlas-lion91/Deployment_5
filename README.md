@@ -84,12 +84,16 @@ In essence, this deployment was not just about setting up an application on the 
 
 2. Checked the application on the second EC2 instance.
    - **Why?** It's essential to verify that the application is running as expected after deployment.
+     ![Screenshot 2023-10-13 215720](https://github.com/atlas-lion91/Deployment_5/assets/140761974/7db859f4-dd4e-47cc-9595-1e454b8c9540)
+
 
 3. Made changes to the HTML content.
    - **Why?** This simulates a real-world scenario where application content or features might be updated frequently.
 
 4. Executed the Jenkinsfilev2.
    - **Why?** To deploy the updated content to the application.
+     ![Screenshot 2023-10-13 223853](https://github.com/atlas-lion91/Deployment_5/assets/140761974/c8d91a42-f948-4904-8a0e-d39dc1d04c99)
+
 
 ### Considerations
 
@@ -105,15 +109,22 @@ During the deployment process, several challenges and issues were encountered:
 
 1. **SSH Key Configuration**:
    - **Issue**: Difficulty in copying the public key from the Jenkins server to the application server.
+     ![Screenshot 2023-10-14 073555](https://github.com/atlas-lion91/Deployment_5/assets/140761974/b4af6204-7d59-4417-a103-2c07f0a8368f)
+
    - **Resolution**: Ensured that the correct permissions were set for the `authorized_keys` file and the `.ssh` directory on the application server.
+     ![Screenshot 2023-10-14 073655](https://github.com/atlas-lion91/Deployment_5/assets/140761974/a62817e4-749f-4795-9f75-a46218c5495f)
+
 
 2. **Jenkins Plugin Compatibility**:
    - **Issue**: Some Jenkins plugins were not compatible with the Jenkins version installed.
    - **Resolution**: Updated Jenkins to the latest version and ensured all plugins were compatible before installation.
+     ![Screenshot 2023-10-14 073828](https://github.com/atlas-lion91/Deployment_5/assets/140761974/96c612e5-7949-4471-97cd-e1067b14ef48)
+
 
 3. **Terraform State Management**:
    - **Issue**: Terraform state conflicts when trying to apply infrastructure changes.
-   - **Resolution**: Used remote state management with Amazon S3 and DynamoDB for state locking to ensure consistent state management.
+     ![Screenshot 2023-10-13 150224](https://github.com/atlas-lion91/Deployment_5/assets/140761974/2c920596-8303-4eec-81c0-0dffb1047491)
+   - **Resolution**: Used remote state management for state locking to ensure consistent state management.
 
 4. **Application Connectivity**:
    - **Issue**: The application on the second EC2 instance was not accessible externally.
