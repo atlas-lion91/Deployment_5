@@ -5,7 +5,7 @@ pipeline {
     steps {
         sh '''#!/bin/bash
         scp pkill.sh ubuntu@52.207.250.161:/home/ubuntu
-        ssh ubuntu@52.207.250.161 'bash -s </home/ubuntu/pkill.sh'
+        ssh ubuntu@34.203.240.195 'bash -s </home/ubuntu/pkill.sh'
         '''
     }
 }
@@ -14,7 +14,7 @@ stage ('Deploy') {
     steps {
         sh '''#!/bin/bash
         scp setup2.sh ubuntu@52.207.250.161:/home/ubuntu
-        ssh ubuntu@52.207.250.161 'bash -s </home/ubuntu/setup2.sh'
+        ssh ubuntu@34.203.240.195 'bash -s </home/ubuntu/setup2.sh'
         '''
     }
 }
