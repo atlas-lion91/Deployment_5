@@ -118,7 +118,6 @@ By: Khalil Elkharbibi
 
 > - **Automated Actions**: Beyond just notifications, alarms can trigger automated actions. For example, if an application's traffic spikes, an alarm could automatically scale up the number of EC2 instances.
 
-> Here's how you can set up a CloudWatch Alarm:
 
 > 1. **Navigate to CloudWatch Console**:
 >   - Open the CloudWatch console in AWS.
