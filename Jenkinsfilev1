@@ -28,8 +28,8 @@ junit 'test-reports/results.xml'
 stage ('Deploy') {
 steps {
 sh '''#!/bin/bash
-scp setup.sh ubuntu@52.207.250.161 :/home/ubuntu
-    ssh ubuntu@52.207.250.161 'bash -s </home/ubuntu/setup.sh'
+scp setup.sh ubuntu@34.203.240.195 :/home/ubuntu
+    ssh ubuntu@34.203.240.195 'bash -s </home/ubuntu/setup.sh'
 '''
 }
 }
