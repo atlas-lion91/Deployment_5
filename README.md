@@ -82,9 +82,51 @@ By: Khalil Elkharbibi
  >  - Defined stages for Build, Test, Deploy, and Reminder.
  >    - **Why?** This structure ensures a clear CI/CD flow: building the application, testing it, deploying it, and then sending reminders or notifications.
 
-2. **Jenkinsfilev2**:
-  > - Defined stages for Clean and Deploy.
-  >   - **Why?** This might be a simplified flow for specific deployment scenarios, like hotfixes or minor updates.
+
+2.  **Creating the "dev" Branch**:
+>   I created a new branch called "dev" to work on our changes separately from the main codebase.
+   ```bash
+   git checkout -b dev
+   ```
+3. **Modifying Jenkinsfilev2 in the "dev" Branch**
+
+> With the "dev" branch active, we made necessary modifications to the 'Clean' & 'Deploy' stages in `Jenkinsfilev2`. After making the changes, I committed them to the "dev" branch:
+
+```bash
+git add Jenkinsfilev2
+git commit -m "Modified Jenkinsfilev2 for enhanced deployment"
+```
+
+4. **Merged the "dev" Branch back to "main"**
+
+> Once we were satisfied with the changes in the "dev" branch, we merged them back into the "main" branch. This ensures that our main codebase benefits from the enhancements we made in the "dev" branch:
+
+> **Switch to the "main" Branch**:
+   ```bash
+   git checkout main
+   ```
+
+> **Merge the "dev" Branch**:
+   ```bash
+   git merge dev
+   ```
+
+> **Push Changes to Remote Repository**:
+>   After merging, we pushed our changes to the remote repository to ensure it's updated with the latest code.
+   ```bash
+   git push origin main
+   ```
+
+ **Why Use Branching and Merging?**
+
+> - **Isolation**: Branching allows developers to work on features, fixes, or experiments without affecting the main codebase. This isolation ensures that the main codebase remains stable.
+  
+> - **Collaboration**: Multiple developers can work on different branches simultaneously, ensuring smooth collaboration without overwriting each other's changes.
+  
+> - **Safe Integration**: Once the changes in a branch are tested and verified, they can be safely merged into the main branch, ensuring that only validated code gets integrated.
+
+
+
 
 ### Deployment Process
 
