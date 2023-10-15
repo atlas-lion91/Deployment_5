@@ -224,6 +224,7 @@ During the deployment process, several challenges and issues were encountered:
 
 1. **Infrastructure as Code (IaC) Enhancements**:
   > - Consider using Terraform modules to modularize and reuse common infrastructure components. This can simplify the Terraform code and make it more maintainable.
+>   - Consider using an automation tool like Ansible to ensure that configurations are consistent across all environments. This reduces the "it works on my machine" type of issues and ensures that what you test is what you deploy.
 
 2. **Jenkins Pipeline Enhancements**:
   > - Implement a rollback mechanism in the Jenkins pipeline. In case of deployment failures, this will ensure that the application can be reverted to its previous stable state.
