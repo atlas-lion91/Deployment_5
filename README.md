@@ -25,7 +25,7 @@ By: Khalil Elkharbibi
 
 ## Plan/System Design Diagram:
 
-![Deployment 5 diagram drawio](https://github.com/atlas-lion91/Deployment_5/assets/140761974/a3dfdcdc-b491-4144-a51e-9d848452a7d3)
+![Deployment 5 diagram drawio (1)](https://github.com/atlas-lion91/Deployment_5/assets/140761974/61a470e9-69b0-4b16-94d3-577cef85ae95)
 
 
 ### Infrastructure Setup with Terraform 
